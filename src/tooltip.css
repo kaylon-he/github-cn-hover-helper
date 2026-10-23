@@ -1,0 +1,71 @@
+:root {
+  --github-cn-hover-bg: #ffffff;
+  --github-cn-hover-fg: #1f2328;
+  --github-cn-hover-muted: #59636e;
+  --github-cn-hover-border: rgba(31, 35, 40, 0.16);
+  --github-cn-hover-accent: #0969da;
+  --github-cn-hover-shadow: 0 16px 48px rgba(31, 35, 40, 0.18);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --github-cn-hover-bg: #161b22;
+    --github-cn-hover-fg: #f0f6fc;
+    --github-cn-hover-muted: #8b949e;
+    --github-cn-hover-border: rgba(240, 246, 252, 0.16);
+    --github-cn-hover-accent: #58a6ff;
+    --github-cn-hover-shadow: 0 16px 48px rgba(0, 0, 0, 0.42);
+  }
+}
+
+.github-cn-hover-tooltip {
+  position: fixed;
+  z-index: 2147483647;
+  width: min(320px, calc(100vw - 24px));
+  box-sizing: border-box;
+  padding: 12px 14px;
+  color: var(--github-cn-hover-fg);
+  background: var(--github-cn-hover-bg);
+  border: 1px solid var(--github-cn-hover-border);
+  border-radius: 8px;
+  box-shadow: var(--github-cn-hover-shadow);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.45;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px) scale(0.98);
+  transform-origin: top left;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.github-cn-hover-tooltip.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.github-cn-hover-title {
+  margin-bottom: 2px;
+  color: var(--github-cn-hover-accent);
+  font-size: 12px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.github-cn-hover-name {
+  color: var(--github-cn-hover-fg);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.github-cn-hover-desc {
+  margin-top: 6px;
+  color: var(--github-cn-hover-muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .github-cn-hover-tooltip {
+    transition: none;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub 中文悬浮助手",
+  "description": "鼠标悬浮 GitHub 按钮、菜单和常见术语时显示中文说明。",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": [
+        "src/terms.js",
+        "src/terms/account.js",
+        "src/terms/home.js",
+        "src/terms/explore.js",
+        "src/content.js"
+      ],
+      "css": ["src/tooltip.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": ["https://github.com/*"],
+  "permissions": []
+}

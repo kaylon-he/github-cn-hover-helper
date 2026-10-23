@@ -1,0 +1,17 @@
+{
+  "name": "github-cn-hover-helper",
+  "version": "1.0.0",
+  "description": "一个轻量 Chrome/Edge 插件：鼠标悬浮到 GitHub 的按钮、菜单、导航和常见术语时，显示中文名称和功能说明。",
+  "main": "index.js",
+  "scripts": {
+    "package": "node scripts/package-extension.js",
+    "verify": "node scripts/verify-github-coverage.js",
+    "test": "npm run verify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  }
+}
